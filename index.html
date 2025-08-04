@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <title>Portfolio | Andy Sarne</title>
     <link rel="stylesheet" href="src/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -17,10 +17,8 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
   </head>
-  <body class="flex flex-col items-center justify-center p-7 relative">
-    
-    <!-- <canvas id="starCanvas" class="fixed opacity-60 z-[-1]"></canvas> -->
-
+  <body class="flex flex-col items-center justify-start p-7 relative gap-y-[80vh]">
+    <div class="starry-background"></div> <!--Star Background-->
     <main
       class="flex flex-col items-center justify-center mt-15 gap-4 w-full sm:w-130 md:w-150"
     >
@@ -67,10 +65,24 @@
           <div id="education-button" class="experience-item w-full text-center p-1 rounded-md cursor-pointer">Education</div>
         </nav>
         <div id="experience-content" class="flex flex-col gap-3.5 mt-2 border  border-solid p-4 rounded-lg">
-          
+          <!--Generate Content-->
         </div>
       </section>
+
+      <section class="flex justify-between items-center w-full py-3 px-5 bg-[#10101450] rounded-lg cursor-pointer hover:bg-[#14141a50] transition-all duration-200 border border-[#ffffff40]">
+        <p class="text-white">More Details</p>
+        <i class="fa-solid fa-arrow-right text-white"></i>
+      </section>
     </main>
+
+    <section class="">
+      <h1 class="text-3xl italic text-white font-bold">My Projects</h1>
+      <div class="w-full ">
+
+      </div>
+    </section>
+
+    <section class="card"></section>
     <script src="/src/main.js"></script>
   </body>
 </html>

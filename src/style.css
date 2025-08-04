@@ -5,15 +5,13 @@
   --black-color: #0c0c0f;
   --dark-shade-color: #242429;
   --dark-shade-lighter-color: #272730;
-  
+
   --subtle-light-color: #b4afb0;
 }
 
 * {
   font-family: Poppins, sans-serif;
 }
-
-
 
 body {
   background-color: var(--black-color);
@@ -45,5 +43,86 @@ body {
 }
 
 #experience-content {
-  border-color: var(--subtle-light-color)
+  border-color: var(--subtle-light-color);
+}
+
+
+.starry-background {
+  @apply fixed top-0 left-0 w-[100vw] h-[100vh] z-[-1] overflow-hidden;
+  background: linear-gradient(to bottom, #06080f 0%, #04060c);
+}
+
+.starry-background::before,
+.starry-background::after {
+  content: "";
+  @apply absolute w-[2px] h-[2px] bg-white rounded-4xl;
+  animation: twinkle 4s infinite linear;
+
+  box-shadow: 
+                /* Row 1 - Top area stars */ 25px 50px #fff,
+    76px 20px #fff, 120px 80px #fff, 180px 30px #fff, 220px 90px #fff,
+    320px 40px #fff, 420px 70px #fff, 520px 10px #fff, 620px 120px #fff,
+    720px 160px #fff, 820px 50px #fff, 920px 80px #fff, 1020px 30px #fff,
+    1120px 90px #fff, 1220px 40px #fff, 1320px 70px #fff, 1420px 10px #fff,
+    1520px 120px #fff, 1620px 160px #fff, 1720px 50px #fff,
+    /* Row 2 - Middle area stars */ 125px 150px #fff, 376px 180px #fff,
+    20px 200px #fff, 180px 130px #fff, 520px 190px #fff, 325px 250px #fff,
+    176px 280px #fff, 420px 230px #fff, 80px 320px #fff, 520px 290px #fff,
+    725px 150px #fff, 976px 180px #fff, 820px 200px #fff, 1080px 130px #fff,
+    1320px 190px #fff, 1125px 250px #fff, 1376px 280px #fff, 1220px 230px #fff,
+    1480px 320px #fff, 1620px 290px #fff,
+    /* Row 3 - Lower area stars */ 225px 350px #fff, 376px 320px #fff,
+    120px 380px #fff, 480px 350px #fff, 320px 420px #fff, 25px 450px #fff,
+    176px 480px #fff, 420px 470px #fff, 520px 450px #fff, 220px 520px #fff,
+    825px 350px #fff, 976px 320px #fff, 920px 380px #fff, 1280px 350px #fff,
+    1120px 420px #fff, 1525px 450px #fff, 1376px 480px #fff, 1220px 470px #fff,
+    1420px 450px #fff, 1620px 520px #fff,
+    /* Row 4 - Bottom area stars */ 50px 600px #fff, 300px 650px #fff,
+    150px 700px #fff, 400px 750px #fff, 250px 800px #fff, 600px 650px #fff,
+    450px 700px #fff, 700px 750px #fff, 550px 800px #fff, 800px 650px #fff,
+    1050px 600px #fff, 1300px 650px #fff, 1150px 700px #fff, 1400px 750px #fff,
+    1250px 800px #fff, 1600px 650px #fff, 1450px 700px #fff, 1700px 750px #fff,
+    1550px 800px #fff, 1800px 650px #fff;
+}
+
+.starry-background::after {
+  width: 1px; /* Smaller stars */
+  height: 1px; /* Smaller stars */
+
+  /* Different star positions for variety */
+  box-shadow: 
+                /* Small stars scattered throughout */ 125px 75px
+      #fff,
+    276px 125px #fff, 420px 175px #fff, 580px 225px #fff, 720px 125px #fff,
+    125px 275px #fff, 376px 225px #fff, 520px 175px #fff, 680px 125px #fff,
+    820px 275px #fff, 925px 175px #fff, 1076px 125px #fff, 1120px 225px #fff,
+    1280px 275px #fff, 1420px 125px #fff, 1525px 175px #fff, 1176px 125px #fff,
+    1320px 225px #fff, 1480px 275px #fff, 1620px 125px #fff, 225px 425px #fff,
+    376px 475px #fff, 520px 525px #fff, 680px 575px #fff, 820px 425px #fff,
+    925px 475px #fff, 1076px 525px #fff, 1220px 575px #fff, 1380px 425px #fff,
+    1520px 475px #fff, 75px 675px #fff, 200px 725px #fff, 350px 775px #fff,
+    500px 675px #fff, 650px 725px #fff, 800px 775px #fff, 950px 675px #fff,
+    1100px 725px #fff, 1250px 775px #fff, 1400px 675px #fff, 1550px 725px #fff,
+    1700px 775px #fff, 100px 825px #fff, 300px 875px #fff, 500px 825px #fff;
+
+  /* Different animation timing for more natural effect */
+  animation: twinkle 6s infinite linear;
+}
+
+@keyframes twinkle {
+  0% {
+    opacity: 0.2;
+  } /* Dim */
+  25% {
+    opacity: 0.8;
+  } /* Bright */
+  50% {
+    opacity: 0.4;
+  } /* Medium */
+  75% {
+    opacity: 1;
+  } /* Brightest */
+  100% {
+    opacity: 0.2;
+  } /* Back to dim */
 }
