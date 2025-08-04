@@ -18,6 +18,9 @@
     />
   </head>
   <body class="flex flex-col items-center justify-center p-7 relative">
+    
+    <!-- <canvas id="starCanvas" class="fixed opacity-60 z-[-1]"></canvas> -->
+
     <main
       class="flex flex-col items-center justify-center mt-15 gap-4 w-full sm:w-130 md:w-150"
     >
@@ -59,9 +62,15 @@
       </section>
 
       <section class="card w-full">
-
+        <nav class="flex items-center justify-around gap-x-3">
+          <div id="work-button" class="selected-experience experience-item w-full rounded-md text-center p-1 cursor-pointer">Work</div>
+          <div id="education-button" class="experience-item w-full text-center p-1 rounded-md cursor-pointer">Education</div>
+        </nav>
+        <div id="experience-content" class="flex flex-col gap-3.5 mt-2 border  border-solid p-4 rounded-lg">
+          
+        </div>
       </section>
     </main>
-    <script type="module" src="/src/main.js"></script>
+    <script src="/src/main.js"></script>
   </body>
 </html>
