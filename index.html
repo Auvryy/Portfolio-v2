@@ -1,14 +1,67 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
-    <link rel="stylesheet" href="src/style.css">
+    <link rel="stylesheet" href="src/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
   </head>
-  <body>
-    <p class="text-1xl">hello World!</p>
+  <body class="flex flex-col items-center justify-center p-7 relative">
+    <main
+      class="flex flex-col items-center justify-center mt-15 gap-4 w-full sm:w-130 md:w-150"
+    >
+      <header
+        class="flex flex-col sm:flex-row sm:justify-between sm:items-center items-center gap-y-3 sm:gap-y-0 absolute top-0 sm:static w-fit sm:w-full"
+      >
+        <ul class="flex items-center justify-center gap-x-4 text-lg text-white">
+          <li class="hover-item">Home</li>
+          <hr class="w-0.5 border-none h-4 bg-white opacity-80" />
+          <li class="hover-item">Blogs</li>
+          <hr class="w-0.5 border-none h-4 bg-white opacity-80" />
+          <li class="hover-item">Contacts</li>
+        </ul>
+        <div class="flex gap-x-3 text-white text-2xl self-center sm:self-auto">
+          <i class="fa-brands fa-linkedin hover-item"></i>
+          <i class="fa-brands fa-square-facebook hover-item"></i>
+          <i class="fa-brands fa-twitter hover-item"></i>
+          <i class="fa-brands fa-github hover-item"></i>
+        </div>
+      </header>
+
+      <section class="card w-full flex gap-x-4 items-center">
+        <div class="w-1/4">
+          <img
+            class="rounded-2xl"
+            src="src/images/andy.png"
+            alt="user-profile"
+          />
+        </div>
+        <div>
+          <h1 class="text-lg sm:text-xl md:text-3xl font-bold">Andy Sarne</h1>
+          <p class="text-hover sm:text-lg md:text-xl">Front-End Developer</p>
+          <p class="text-hover sm:text-lg md:text-xl">UI / UX Designer</p>
+          <div class="flex items-center gap-2  mt-2 text-hover text-sm sm:text-base">
+            <i class="fa-solid fa-location-dot "></i>
+            <p>Victoria, Laguna</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="card w-full">
+
+      </section>
+    </main>
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>

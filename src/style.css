@@ -1,1 +1,27 @@
 @import "tailwindcss";
+
+@theme {
+  --dark-color: #161619;
+  --black-color: #0c0c0f;
+}
+
+* {
+  font-family: Poppins, sans-serif;
+}
+
+body {
+  background-color: var(--black-color);
+}
+
+.card {
+  @apply rounded-2xl text-white p-5 shadow-[-5px_10px_20px_rgba(255,255,255,0.03)];
+  background-color: var(--dark-color);
+}
+
+.hover-item {
+  @apply opacity-80 hover:opacity-100 cursor-pointer transition-all duration-150 hover:translate-y-[-3px];
+}
+
+.text-hover {
+  @apply opacity-80 hover:opacity-100 transition-all duration-200 cursor-default;
+}
