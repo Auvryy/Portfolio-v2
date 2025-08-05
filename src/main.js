@@ -148,6 +148,7 @@ const generateProject = (projectList) => {
     const linkButton = document.createElement('a');
     linkButton.href = projectList[i].link;
     linkButton.classList.add('button-primary');
+    linkButton.target = '_blank'
     linkButton.innerHTML = `
       <i class="fa-brands fa-github text-xl"></i>
       <p>Github Repository</p>
