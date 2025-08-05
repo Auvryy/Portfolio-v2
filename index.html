@@ -40,10 +40,10 @@
     </div>
 
     <main
-      class="flex flex-col items-center justify-center mt-15 gap-4 w-full sm:w-130 md:w-150"
+      class=" flex flex-col items-center justify-center mt-15 gap-4 w-full sm:w-130 md:w-150"
     >
       <header
-        class="flex flex-col sm:flex-row sm:justify-between sm:items-center items-center gap-y-3 sm:gap-y-0 absolute top-4 sm:static w-fit sm:w-full"
+        class="scroll-hidden flex flex-col sm:flex-row sm:justify-between sm:items-center items-center gap-y-3 sm:gap-y-0 absolute top-4 sm:static w-fit sm:w-full"
       >
         <ul class="flex items-center justify-center gap-x-4 text-lg text-white">
           <li id="home" class="hover-item">Home</li>
@@ -60,7 +60,7 @@
         </div>
       </header>
 
-      <section class="card w-full flex gap-x-4 items-center">
+      <section class="scroll-hidden card w-full flex gap-x-4 items-center">
         <div class="w-1/4">
           <img
             class="rounded-2xl"
@@ -81,7 +81,7 @@
         </div>
       </section>
 
-      <section class="card w-full">
+      <section class="scroll-hidden-item scroll-hidden card w-full">
         <nav class="flex items-center justify-around gap-x-3">
           <div
             id="work-button"
@@ -105,14 +105,14 @@
       </section>
 
       <section
-        class="flex justify-between items-center w-full py-3 px-5 bg-[#10101450] rounded-lg cursor-pointer hover:bg-[#14141a50] transition-all duration-200 border border-[#ffffff40]"
+        class="scroll-hidden-item scroll-hidden flex justify-between items-center w-full py-3 px-5 bg-[#10101450] rounded-lg cursor-pointer hover:bg-[#14141a50] transition-all duration-200 border border-[#ffffff40]"
       >
         <p class="text-white">More Details</p>
         <i class="fa-solid fa-arrow-right text-white"></i>
       </section>
     </main>
 
-    <section id="projects-section" class="flex items-center flex-col relative">
+    <section id="projects-section" class="scroll-hidden flex items-center flex-col relative">
       <h1 class="">Contributions & Projects</h1>
       <div
         class="w-fit md:w-160 grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-5"
@@ -141,7 +141,7 @@
       </div>
     </section>
 
-    <section id="contacts-section" >
+    <section id="contacts-section" class="scroll-hidden">
       <section class="flex flex-col justify-start items-center md:items-start">
         <h3
           class="text-[clamp(2rem,10vw,6rem)] text-white italic font-semibold text-nowrap"

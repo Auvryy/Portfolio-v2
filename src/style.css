@@ -9,11 +9,7 @@
   --subtle-light-color: #b4afb0;
 }
 
-
-
 @layer base {
-  
-
   h1 {
     @apply text-3xl italic text-white font-bold mb-5 text-center;
   }
@@ -28,7 +24,6 @@
 
 body {
   background-color: var(--black-color);
-  
 }
 
 .card {
@@ -63,6 +58,23 @@ body {
 .info-header {
   @apply py-1 px-5 border border-white rounded-2xl text-white bg-transparent w-fit;
 }
+
+.scroll-hidden {
+  @apply opacity-0 transition-all duration-900 blur-sm translate-x-[-100%]
+}
+
+.scroll-show {
+  @apply opacity-100 blur-none translate-0;
+}
+
+.scroll-hidden-item:nth-last-child(1) {
+  @apply delay-200
+}
+
+.scroll-hidden-item:nth-last-child(2) {
+  @apply delay-100
+}
+
 
 .starry-background {
   @apply fixed top-0 left-0 w-[100vw] h-[100vh] z-[-1] overflow-hidden;
