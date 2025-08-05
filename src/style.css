@@ -38,7 +38,11 @@
   }
 
   .project-title {
-    @apply text-[1.1rem] sm:text-xl text-center;
+    @apply text-[1.1rem] sm:text-xl text-center ;
+  }
+
+  .project-image {
+    @apply rounded-xl w-fit object-cover m-auto
   }
 }
 

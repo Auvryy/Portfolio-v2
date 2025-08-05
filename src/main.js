@@ -74,9 +74,21 @@ const projectsContent = [
   {
     name: "Inventory Management System",
     image: "src/images/project-1.svg",
-    techStack: ["HTML", "CSS", "JavaScript"],
+    techStack: ["HTML5", "CSS3", "JavaScript"],
     link: "https://github.com/ZieksQ/ITEC_FinalProject.git",
   },
+  {
+    name: "Bullet Quiz",
+    image: "src/images/bullet_quiz.png",
+    techStack: ['HTML5', 'Bootstrap', 'JavaScript', 'Open Trivia Database API'],
+    link: 'https://github.com/Auvryy/Bullet-Quiz',
+  },
+  {
+    name: 'My Portfolio',
+    image: 'src/images/portfolio.png',
+    techStack: ['HTML5', 'TailwindCSS', 'JavaScript', 'Vite'],
+    link: 'https://github.com/Auvryy/Portfolio-v2'
+  }
 ];
 
 const generateExp = (object) => {
@@ -117,6 +129,7 @@ const generateProject = (projectList) => {
 
     const projectImage = document.createElement('img')
     projectImage.src = projectList[i].image;
+    projectImage.classList.add('project-image')
 
     const title = document.createElement('p')
     title.classList.add('project-title')
