@@ -59,6 +59,10 @@ body {
   border-color: var(--subtle-light-color);
 }
 
+.info-header {
+  @apply py-1 px-5 border border-white rounded-2xl text-white bg-transparent w-fit;
+}
+
 .starry-background {
   @apply fixed top-0 left-0 w-[100vw] h-[100vh] z-[-1] overflow-hidden;
   background: linear-gradient(to bottom, #06080f 0%, #04060c);

@@ -28,9 +28,15 @@
       id="cursor-star"
       class="hidden sm:block fixed top-0 left-0 w-6 h-6 pointer-events-none z-50"
     >
-      <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" fill="white">
-      <path d="M256 0C290 140 372 222 512 256C372 290 290 372 256 512C222 372 140 290 0 256C140 222 222 140 256 0Z" />
-    </svg>
+      <svg
+        viewBox="0 0 512 512"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="white"
+      >
+        <path
+          d="M256 0C290 140 372 222 512 256C372 290 290 372 256 512C222 372 140 290 0 256C140 222 222 140 256 0Z"
+        />
+      </svg>
     </div>
 
     <main
@@ -135,10 +141,48 @@
       </div>
     </section>
 
-    <section class="flex flex-col items-center gap-4">
-      <!--Contact Section-->
-      <h1>Contact Me!</h1>
-      <div class="card"></div>
+    <section class="">
+      <section class="flex flex-col justify-start items-center md:items-start">
+        <h3
+          class="text-[clamp(2rem,10vw,6rem)] text-white italic font-semibold text-nowrap"
+        >
+          Andy Sarne
+        </h3>
+        <div
+          class="flex gap-x-3 text-white text-2xl self-center sm:self-auto mt-[-0.5rem]"
+        >
+          <i class="fa-brands fa-linkedin hover-item"></i>
+          <i class="fa-brands fa-square-facebook hover-item"></i>
+          <i class="fa-brands fa-twitter hover-item"></i>
+          <i class="fa-brands fa-github hover-item"></i>
+        </div>
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-5 text-white"
+        >
+          <section class="flex flex-col gap-5 mt-15 w-full items-center md:items-start text-center md:text-start">
+            <div class="info-header">Address</div>
+            <div class="w-[90%] flex flex-col gap-10 text-2xl">
+              <p>Philippines, Victoria, Laguna</p>
+              <p class="text-hover">
+                If your dare to find me, try to contact me because this is not
+                my real address.
+              </p>
+            </div>
+          </section>
+          <section class="flex flex-col gap-5 mt-15 w-full items-center md:items-start text-center md:text-start">
+            <div class="info-header">Let's Talk!</div>
+            <div class="w-[90%] flex flex-col gap-10 text-2xl">
+              <p>Have questions? Contact me through phone, email, or my socials — I'm eager to connect with you.</p>
+              <p class="text-hover">
+                sarneandy6@gmail.com <br>
+                63+ 9123456780
+              </p>
+              
+            </div>
+          </section>
+        </div>
+      </section>
+      <section></section>
     </section>
     <script src="/src/main.js"></script>
   </body>
