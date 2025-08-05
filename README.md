@@ -1,8 +1,11 @@
+<div align="center">
+   
 # ✨ Andy Sarne Portfolio
 
-<div align="center">
+</div>
 
-![Portfolio Banner](https://via.placeholder.com/800x200/0c0c0f/ffffff?text=Andy+Sarne+Portfolio)
+
+<div align="center">
 
 ### A Modern Dark-Themed Portfolio Website
 
