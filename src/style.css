@@ -2,9 +2,11 @@
 
 @theme {
   --dark-color: #161619;
+  --sligther-dark-color: #282828;
   --black-color: #0c0c0f;
   --dark-shade-color: #242429;
   --dark-shade-lighter-color: #272730;
+
 
   --subtle-light-color: #b4afb0;
 }
@@ -15,6 +17,20 @@
   }
   h2 {
     @apply text-lg sm:text-xl md:text-3xl font-bold;
+  }
+}
+
+@layer components {
+  .tech-stack {
+    @apply px-3 py-1 bg-[var(--sligther-dark-color)] rounded-sm text-white cursor-default
+  }
+
+  .button-primary {
+    @apply mt-auto flex items-center gap-3 py-2 px-3 border rounded-md bg-white text-black duration-500 hover:translate-y-[-1px] hover:bg-transparent hover:text-white;
+  }
+
+  .project-card {
+    @apply flex flex-col items-center gap-3 w-full md:basis-1/2 max-w-lg ;
   }
 }
 

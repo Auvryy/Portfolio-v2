@@ -29,15 +29,15 @@ const workContent = [
     name: "Krusty Krab",
     yearStart: 2018,
     yearEnd: 2022,
-    picture: "./src/images/andy.png",
+    picture: "./src/images/krusty_krab.jpg",
     description: "Information Consultant Pro",
   },
 
   {
-    name: "Gugelu",
+    name: "Burnin' Kush",
     yearStart: 2022,
     yearEnd: 2025,
-    picture: "./src/images/andy.png",
+    picture: "./src/images/burnin_kush.jpg",
     description: "Ultra Duper Software Dev",
   },
 ];
@@ -47,7 +47,7 @@ const educationContent = [
     name: "LSPU",
     yearStart: 2024,
     yearEnd: 2025,
-    picture: "./src/images/andy.png",
+    picture: "./src/images/lspu.jpeg",
     description: "College degree: Information Technology",
   },
 
@@ -55,7 +55,7 @@ const educationContent = [
     name: "Lico De Victoria",
     yearStart: 2021,
     yearEnd: 2024,
-    picture: "./src/images/andy.png",
+    picture: "./src/images/ldv.jpeg",
     description: "Senior High School",
   },
 
@@ -63,7 +63,7 @@ const educationContent = [
     name: "Liceo De Victoria",
     yearStart: 2017,
     yearEnd: 2024,
-    picture: "./src/images/andy.png",
+    picture: "./src/images/ldv.jpeg",
     description: "High School",
   },
 ];
@@ -81,7 +81,7 @@ const generateExp = (object) => {
     );
     experienceBlock.innerHTML = `
             <div class="flex items-center gap-x-2 w-full">
-              <img class="w-16 rounded-full hidden sm:block" src="${object[i].picture}" alt="">
+              <img class="w-16 h-16 object-cover rounded-full hidden sm:block" src="${object[i].picture}" alt="">
               <div>
                 <p class="font-semibold">${object[i].name}</p>
                 <p class="text-hover">${object[i].yearStart} - ${object[i].yearEnd}</p>
@@ -96,6 +96,22 @@ const generateExp = (object) => {
   }
   console.log("done");
 };
+
+const generateProject = (object) => {
+  const projectContainer = document.getElementById('project-container')
+  projectContainer.innerHTML = ''
+  for (let i = 0; i < object.length; i++) {
+    const projectCard = document.createElement('div')
+    
+  }
+}
+
+
+
+
+
+
+
 
 const cursorStar = document.getElementById("cursor-star");
 
@@ -121,7 +137,6 @@ function animateStar() {
 animateStar();
 
 //click to scroll
-const homeBtn = document.getElementById('home');
 const projectsBtn = document.getElementById('projects')
 const contactsBtn = document.getElementById('contacts')
 

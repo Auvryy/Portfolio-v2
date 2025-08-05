@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coming Soon - Space Launch</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap');
+        
+        body {
+            font-family: 'Orbitron', monospace;
+            background: linear-gradient(135deg, #0c0c0c 0%, #1a1a2e 25%, #16213e 50%, #0f3460 75%, #533483 100%);
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .stars {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+        
+        .star {
+            position: absolute;
+            background: white;
+            border-radius: 50%;
+            animation: twinkle 2s infinite;
+        }
+        
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 1; }
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        
+        @keyframes glow {
+            0%, 100% { box-shadow: 0 0 20px rgba(59, 130, 246, 0.5); }
+            50% { box-shadow: 0 0 40px rgba(59, 130, 246, 0.8), 0 0 60px rgba(59, 130, 246, 0.4); }
+        }
+        
+        .floating { animation: float 6s ease-in-out infinite; }
+        .pulsing { animation: pulse 4s ease-in-out infinite; }
+        .glowing { animation: glow 3s ease-in-out infinite; }
+        
+        .countdown-box {
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(59, 130, 246, 0.3);
+        }
+        
+        .cosmic-text {
+            background: linear-gradient(45deg, #60a5fa, #a78bfa, #f472b6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .planet {
+            position: absolute;
+            border-radius: 50%;
+            opacity: 0.6;
+        }
+        
+        .planet-1 {
+            width: 80px;
+            height: 80px;
+            background: radial-gradient(circle at 30% 30%, #f59e0b, #dc2626);
+            top: 20%;
+            right: 10%;
+            animation: float 8s ease-in-out infinite;
+        }
+        
+        .planet-2 {
+            width: 60px;
+            height: 60px;
+            background: radial-gradient(circle at 30% 30%, #3b82f6, #1e40af);
+            bottom: 25%;
+            left: 15%;
+            animation: float 10s ease-in-out infinite reverse;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex items-center justify-center relative">
+    <!-- Animated Stars Background -->
+    <div class="stars" id="stars"></div>
+    
+    <!-- Floating Planets -->
+    <div class="planet planet-1"></div>
+    <div class="planet planet-2"></div>
+    
+    <!-- Main Content -->
+    <div class="text-center z-10 px-4 max-w-4xl mx-auto">
+        <!-- Coming Soon Title -->
+        <div class="floating mb-8">
+            <h1 class="text-6xl md:text-8xl font-black cosmic-text mb-4 tracking-wider">
+                COMING SOON
+            </h1>
+            <div class="h-1 w-32 mx-auto bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-full glowing"></div>
+        </div>
+        
+        <!-- Subtitle -->
+        <p class="text-xl md:text-2xl text-blue-200 mb-12 pulsing font-light tracking-wide">
+            Something extraordinary is launching into the digital cosmos
+        </p>
+        
+        <!-- Countdown Timer -->
+        <div class="countdown-box rounded-2xl p-8 md:p-12 mx-auto max-w-3xl glowing">
+            <div class="grid grid-cols-4 gap-4 md:gap-8" id="countdown">
+                <div class="text-center">
+                    <div class="bg-gradient-to-b from-slate-700 to-slate-900 rounded-xl p-4 md:p-6 border border-blue-500/30">
+                        <div class="text-3xl md:text-5xl font-bold text-white" id="days">00</div>
+                        <div class="text-sm md:text-base text-blue-300 mt-2 uppercase tracking-widest">Days</div>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <div class="bg-gradient-to-b from-slate-700 to-slate-900 rounded-xl p-4 md:p-6 border border-purple-500/30">
+                        <div class="text-3xl md:text-5xl font-bold text-white" id="hours">00</div>
+                        <div class="text-sm md:text-base text-purple-300 mt-2 uppercase tracking-widest">Hours</div>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <div class="bg-gradient-to-b from-slate-700 to-slate-900 rounded-xl p-4 md:p-6 border border-pink-500/30">
+                        <div class="text-3xl md:text-5xl font-bold text-white" id="minutes">00</div>
+                        <div class="text-sm md:text-base text-pink-300 mt-2 uppercase tracking-widest">Minutes</div>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <div class="bg-gradient-to-b from-slate-700 to-slate-900 rounded-xl p-4 md:p-6 border border-cyan-500/30">
+                        <div class="text-3xl md:text-5xl font-bold text-white" id="seconds">00</div>
+                        <div class="text-sm md:text-base text-cyan-300 mt-2 uppercase tracking-widest">Seconds</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Launch Date -->
+        <div class="mt-8 text-blue-100/80 text-lg tracking-wide">
+            Launch Date: <span class="font-bold cosmic-text">November 18, 2025</span>
+        </div>
+    </div>
+
+    <script>
+        // Create animated stars
+        function createStars() {
+            const starsContainer = document.getElementById('stars');
+            const numStars = 150;
+            
+            for (let i = 0; i < numStars; i++) {
+                const star = document.createElement('div');
+                star.className = 'star';
+                star.style.left = Math.random() * 100 + '%';
+                star.style.top = Math.random() * 100 + '%';
+                star.style.width = Math.random() * 3 + 1 + 'px';
+                star.style.height = star.style.width;
+                star.style.animationDelay = Math.random() * 2 + 's';
+                starsContainer.appendChild(star);
+            }
+        }
+        
+        // Countdown Timer
+        function updateCountdown() {
+            const targetDate = new Date('November 18, 2025 00:00:00').getTime();
+            const now = new Date().getTime();
+            const distance = targetDate - now;
+            
+            if (distance < 0) {
+                document.getElementById('countdown').innerHTML = '<div class="text-4xl font-bold text-green-400">🚀 LAUNCHED! 🚀</div>';
+                return;
+            }
+            
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            
+            document.getElementById('days').textContent = days.toString().padStart(2, '0');
+            document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+            document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+            document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+        }
+        
+        // Initialize
+        createStars();
+        updateCountdown();
+        setInterval(updateCountdown, 1000);
+    </script>
+</body>
+</html>

@@ -18,7 +18,7 @@
     />
   </head>
   <body
-    class="flex flex-col items-center justify-start p-7  gap-y-[80vh] scroll-smooth mb-10 relative"
+    class="flex flex-col items-center justify-start p-7 gap-y-[80vh] scroll-smooth mb-10 relative"
   >
     <div class="starry-background"></div>
     <!--Star Background-->
@@ -40,23 +40,31 @@
     </div>
 
     <main
-      class=" flex flex-col items-center justify-center mt-15 gap-4 w-full sm:w-130 md:w-150"
+      class="flex flex-col items-center justify-center mt-15 gap-4 w-full sm:w-130 md:w-150"
     >
       <header
         class="scroll-hidden flex flex-col sm:flex-row sm:justify-between sm:items-center items-center gap-y-3 sm:gap-y-0 absolute top-4 sm:static w-fit sm:w-full"
       >
         <ul class="flex items-center justify-center gap-x-4 text-lg text-white">
-          <li id="home" class="hover-item">Home</li>
+          <a href="home"><li class="hover-item">Home</li></a>
           <hr class="w-0.5 border-none h-4 bg-white opacity-80" />
           <li id="projects" class="hover-item">Projects</li>
           <hr class="w-0.5 border-none h-4 bg-white opacity-80" />
           <li id="contacts" class="hover-item">Contacts</li>
         </ul>
         <div class="flex gap-x-3 text-white text-2xl self-center sm:self-auto">
-          <i class="fa-brands fa-linkedin hover-item"></i>
-          <i class="fa-brands fa-square-facebook hover-item"></i>
-          <i class="fa-brands fa-twitter hover-item"></i>
-          <i class="fa-brands fa-github hover-item"></i>
+          <a href="www.linkedin.com/in/andy-sarne"
+            ><i class="fa-brands fa-linkedin hover-item"></i
+          ></a>
+          <a href="https://www.facebook.com/sarneandy636"
+            ><i class="fa-brands fa-square-facebook hover-item"></i
+          ></a>
+          <a href="https://x.com/auvrry"
+            ><i class="fa-brands fa-twitter hover-item"></i
+          ></a>
+          <a href="https://github.com/Auvryy"
+            ><i class="fa-brands fa-github hover-item"></i
+          ></a>
         </div>
       </header>
 
@@ -104,39 +112,37 @@
         </div>
       </section>
 
-      <section
+      <a
+        href="home.html"
         class="scroll-hidden-item scroll-hidden flex justify-between items-center w-full py-3 px-5 bg-[#10101450] rounded-lg cursor-pointer hover:bg-[#14141a50] transition-all duration-200 border border-[#ffffff40]"
       >
         <p class="text-white">More Details</p>
         <i class="fa-solid fa-arrow-right text-white"></i>
-      </section>
+      </a>
     </main>
 
-    <section id="projects-section" class="scroll-hidden flex items-center flex-col relative">
+    <section
+      id="projects-section"
+      class="scroll-hidden flex items-center flex-col relative"
+    >
       <h1 class="">Contributions & Projects</h1>
       <div
-        class="w-fit md:w-160 grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-5"
+        id="project-container"
+        class="w-full flex flex-wrap justify-center gap-5"
       >
         <!--project grid-->
-        <div class="card w-fit flex items-center flex-col gap-3">
+        <div class="project-card card">
           <img src="src/images/project-1.svg" alt="" />
-          <p class="text-[1.1rem] sm:text-xl text-center text-hover">
-            Inventory Management System 1
+          <p class="text-[1.1rem] sm:text-xl text-center">
+            Inventory Management System
           </p>
-        </div>
-        <div class="card w-fit flex items-center flex-col gap-3">
-          <img src="src/images/project-1.svg" alt="" />
-          <p class="text-[1.1rem] sm:text-xl text-center text-hover">
-            Inventory Management System 2
-          </p>
-        </div>
-        <div
-          class="card w-fit flex items-center flex-col gap-3 md:col-span-2 md:w-1/2 md:mx-auto"
-        >
-          <img src="src/images/project-1.svg" alt="" />
-          <p class="text-[1.1rem] sm:text-xl text-center text-hover">
-            Inventory Management System 2
-          </p>
+          <ul class="flex flex-wrap justify-center gap-3 text-[0.8rem]">
+            <li class="tech-stack">HTML5</li>
+          </ul>
+          <a href="" class="button-primary"
+            ><i class="fa-brands fa-github text-xl"></i>
+            <p>Github Repository</p></a
+          >
         </div>
       </div>
     </section>
@@ -151,14 +157,22 @@
         <div
           class="flex gap-x-3 text-white text-2xl self-center sm:self-auto mt-[-0.5rem]"
         >
-          <i class="fa-brands fa-linkedin hover-item"></i>
-          <i class="fa-brands fa-square-facebook hover-item"></i>
-          <i class="fa-brands fa-twitter hover-item"></i>
-          <i class="fa-brands fa-github hover-item"></i>
+          <a href="www.linkedin.com/in/andy-sarne"
+            ><i class="fa-brands fa-linkedin hover-item"></i
+          ></a>
+          <a href="https://www.facebook.com/sarneandy636"
+            ><i class="fa-brands fa-square-facebook hover-item"></i
+          ></a>
+          <a href="https://x.com/auvrry"
+            ><i class="fa-brands fa-twitter hover-item"></i
+          ></a>
+          <a href="https://github.com/Auvryy"
+            ><i class="fa-brands fa-github hover-item"></i
+          ></a>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-5 text-white">
           <section
-            class="flex flex-col gap-5 mt-15 w-full items-center md:items-start text-center md:text-start"
+            class="flex flex-col gap-5 mt-18 w-full items-center md:items-start text-center md:text-start"
           >
             <div class="info-header">Address</div>
             <div class="w-[90%] flex flex-col gap-10 text-2xl">
