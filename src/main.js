@@ -1,6 +1,8 @@
+
 // import { workContent, educationContent} from "./data.js";
 addEventListener("DOMContentLoaded", () => {
   generateExp(workContent);
+  generateProject(projectsContent)
 });
 
 const workBtn = document.getElementById("work-button");
@@ -68,6 +70,15 @@ const educationContent = [
   },
 ];
 
+const projectsContent = [
+  {
+    name: "Inventory Management System",
+    image: "src/images/project-1.svg",
+    techStack: ["HTML", "CSS", "JavaScript"],
+    link: "https://github.com/ZieksQ/ITEC_FinalProject.git",
+  },
+];
+
 const generateExp = (object) => {
   const experienceContent = document.getElementById("experience-content");
   experienceContent.innerHTML = "";
@@ -97,21 +108,47 @@ const generateExp = (object) => {
   console.log("done");
 };
 
-const generateProject = (object) => {
+const generateProject = (projectList) => {
   const projectContainer = document.getElementById('project-container')
   projectContainer.innerHTML = ''
-  for (let i = 0; i < object.length; i++) {
+  for (let i = 0; i < projectList.length; i++) {
     const projectCard = document.createElement('div')
-    
+    projectCard.classList.add('project-card', 'card');
+
+    const projectImage = document.createElement('img')
+    projectImage.src = projectList[i].image;
+
+    const title = document.createElement('p')
+    title.classList.add('project-title')
+    title.innerText = projectList[i].name;
+
+    const ul = document.createElement('ul')
+    ul.classList.add('tech-stack-container')
+
+    projectList[i].techStack.forEach(stack => {
+      const li = document.createElement('li')
+      li.classList.add('tech-stack')
+      li.innerText = stack;
+      ul.appendChild(li)
+    });
+
+    const linkButton = document.createElement('a');
+    linkButton.href = projectList[i].link;
+    linkButton.classList.add('button-primary');
+    linkButton.innerHTML = `
+      <i class="fa-brands fa-github text-xl"></i>
+      <p>Github Repository</p>
+    `;
+
+    projectCard.appendChild(projectImage);
+    projectCard.appendChild(title)
+    projectCard.appendChild(ul);
+    projectCard.appendChild(linkButton)
+
+    projectContainer.appendChild(projectCard);
+
   }
 }
-
-
-
-
-
-
-
 
 const cursorStar = document.getElementById("cursor-star");
 
@@ -137,32 +174,32 @@ function animateStar() {
 animateStar();
 
 //click to scroll
-const projectsBtn = document.getElementById('projects')
-const contactsBtn = document.getElementById('contacts')
+const projectsBtn = document.getElementById("projects");
+const contactsBtn = document.getElementById("contacts");
 
-const projectSection = document.getElementById('projects-section')
-const contactsSection = document.getElementById('contacts-section')
+const projectSection = document.getElementById("projects-section");
+const contactsSection = document.getElementById("contacts-section");
 
-projectsBtn.addEventListener('click', () => {
-  projectSection.scrollIntoView({behavior: 'smooth'})
+projectsBtn.addEventListener("click", () => {
+  projectSection.scrollIntoView({ behavior: "smooth" });
 });
 
-contactsBtn.addEventListener('click', () => {
-  contactsSection.scrollIntoView({behavior: 'smooth'})
-})
+contactsBtn.addEventListener("click", () => {
+  contactsSection.scrollIntoView({ behavior: "smooth" });
+});
 
 //animation scrolling
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
-    console.log(entry)
+    console.log(entry);
     if (entry.isIntersecting) {
-      entry.target.classList.add('scroll-show')
-    } 
+      entry.target.classList.add("scroll-show");
+    }
     // else {
     //   entry.target.classList.remove('scroll-show')
     // }
-  })
-})
+  });
+});
 
-const hiddenElements = document.querySelectorAll('.scroll-hidden')
-hiddenElements.forEach((el) =>  observer.observe(el))
+const hiddenElements = document.querySelectorAll(".scroll-hidden");
+hiddenElements.forEach((el) => observer.observe(el));
