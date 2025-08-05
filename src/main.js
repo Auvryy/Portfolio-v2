@@ -1,8 +1,7 @@
 // import { workContent, educationContent} from "./data.js";
-addEventListener('DOMContentLoaded', () => {
-
-  generateExp(workContent)
-})
+addEventListener("DOMContentLoaded", () => {
+  generateExp(workContent);
+});
 
 const workBtn = document.getElementById("work-button");
 const educationBtn = document.getElementById("education-button");
@@ -22,7 +21,7 @@ educationBtn.addEventListener("click", (e) => {
     educationBtn.classList.add("selected-experience");
     workBtn.classList.remove("selected-experience");
   }
-  generateExp(educationContent)
+  generateExp(educationContent);
 });
 
 const workContent = [
@@ -45,38 +44,41 @@ const workContent = [
 
 const educationContent = [
   {
-    name: 'LSPU',
+    name: "LSPU",
     yearStart: 2024,
     yearEnd: 2025,
-    picture: './src/images/andy.png',
-    description: 'College degree: Information Technology'
+    picture: "./src/images/andy.png",
+    description: "College degree: Information Technology",
   },
 
   {
-    name: 'Lico De Victoria',
+    name: "Lico De Victoria",
     yearStart: 2021,
     yearEnd: 2024,
-    picture: './src/images/andy.png',
-    description: 'Senior High School'
+    picture: "./src/images/andy.png",
+    description: "Senior High School",
   },
 
-  { 
-    name: 'Liceo De Victoria',
+  {
+    name: "Liceo De Victoria",
     yearStart: 2017,
     yearEnd: 2024,
-    picture: './src/images/andy.png',
-    description: 'High School'
-  }
-]
-
-
+    picture: "./src/images/andy.png",
+    description: "High School",
+  },
+];
 
 const generateExp = (object) => {
   const experienceContent = document.getElementById("experience-content");
-  experienceContent.innerHTML = ''
+  experienceContent.innerHTML = "";
   for (let i = 0; i < object.length; i++) {
     const experienceBlock = document.createElement("section");
-    experienceBlock.classList.add("flex", 'items-center', 'justify-between', 'gap-x-6');
+    experienceBlock.classList.add(
+      "flex",
+      "items-center",
+      "justify-between",
+      "gap-x-6"
+    );
     experienceBlock.innerHTML = `
             <div class="flex items-center gap-x-2 w-full">
               <img class="w-16 rounded-full hidden sm:block" src="${object[i].picture}" alt="">
@@ -95,3 +97,25 @@ const generateExp = (object) => {
   console.log("done");
 };
 
+const cursorStar = document.getElementById("cursor-star");
+
+let mouseX = 0,
+  mouseY = 0;
+let starX = 0,
+  starY = 0;
+
+document.addEventListener("mousemove", (e) => {
+  mouseX = e.clientX;
+  mouseY = e.clientY;
+});
+
+function animateStar() {
+  starX += (mouseX - starX) * 0.12;
+  starY += (mouseY - starY) * 0.12;
+
+  cursorStar.style.transform = `translate3d(${starX - 10}px, ${starY - 10}px, 0)`;
+
+  requestAnimationFrame(animateStar);
+}
+
+animateStar();

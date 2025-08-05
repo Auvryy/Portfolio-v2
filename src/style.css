@@ -9,6 +9,19 @@
   --subtle-light-color: #b4afb0;
 }
 
+
+
+@layer base {
+  
+
+  h1 {
+    @apply text-3xl italic text-white font-bold mb-5 text-center;
+  }
+  h2 {
+    @apply text-lg sm:text-xl md:text-3xl font-bold;
+  }
+}
+
 * {
   font-family: Poppins, sans-serif;
 }
@@ -45,7 +58,6 @@ body {
 #experience-content {
   border-color: var(--subtle-light-color);
 }
-
 
 .starry-background {
   @apply fixed top-0 left-0 w-[100vw] h-[100vh] z-[-1] overflow-hidden;
