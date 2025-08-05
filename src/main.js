@@ -119,3 +119,19 @@ function animateStar() {
 }
 
 animateStar();
+
+//click to scroll
+const homeBtn = document.getElementById('home');
+const projectsBtn = document.getElementById('projects')
+const contactsBtn = document.getElementById('contacts')
+
+const projectSection = document.getElementById('projects-section')
+const contactsSection = document.getElementById('contacts-section')
+
+projectsBtn.addEventListener('click', () => {
+  projectSection.scrollIntoView({behavior: 'smooth'})
+});
+
+contactsBtn.addEventListener('click', () => {
+  contactsSection.scrollIntoView({behavior: 'smooth'})
+})
