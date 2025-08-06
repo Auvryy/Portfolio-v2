@@ -31,7 +31,7 @@ const workContent = [
     name: "Krusty Krab",
     yearStart: 2018,
     yearEnd: 2022,
-    picture: "./src/images/krusty_krab.jpg",
+    picture: "./images/krusty_krab.jpg",
     description: "Information Consultant Pro",
   },
 
@@ -39,7 +39,7 @@ const workContent = [
     name: "Burnin' Kush",
     yearStart: 2022,
     yearEnd: 2025,
-    picture: "./src/images/burnin_kush.jpg",
+    picture: "./images/burnin_kush.jpg",
     description: "Ultra Duper Software Dev",
   },
 ];
@@ -49,7 +49,7 @@ const educationContent = [
     name: "LSPU",
     yearStart: 2024,
     yearEnd: 2025,
-    picture: "./src/images/lspu.jpeg",
+    picture: "./images/lspu.jpeg",
     description: "College degree: Information Technology",
   },
 
@@ -57,7 +57,7 @@ const educationContent = [
     name: "Lico De Victoria",
     yearStart: 2021,
     yearEnd: 2024,
-    picture: "./src/images/ldv.jpeg",
+    picture: "./images/ldv.jpeg",
     description: "Senior High School",
   },
 
@@ -65,7 +65,7 @@ const educationContent = [
     name: "Liceo De Victoria",
     yearStart: 2017,
     yearEnd: 2024,
-    picture: "./src/images/ldv.jpeg",
+    picture: "./images/ldv.jpeg",
     description: "High School",
   },
 ];
@@ -73,19 +73,19 @@ const educationContent = [
 const projectsContent = [
   {
     name: "Inventory Management System",
-    image: "src/images/project-1.svg",
+    image: "./images/project-1.svg",
     techStack: ["HTML5", "CSS3", "JavaScript"],
     link: "https://github.com/ZieksQ/ITEC_FinalProject.git",
   },
   {
     name: "Bullet Quiz",
-    image: "src/images/bullet_quiz.png",
+    image: "./images/bullet_quiz.png",
     techStack: ['HTML5', 'Bootstrap', 'JavaScript', 'Open Trivia Database API'],
     link: 'https://github.com/Auvryy/Bullet-Quiz',
   },
   {
     name: 'My Portfolio',
-    image: 'src/images/portfolio.png',
+    image: './images/portfolio.png',
     techStack: ['HTML5', 'TailwindCSS', 'JavaScript', 'Vite'],
     link: 'https://github.com/Auvryy/Portfolio-v2'
   }
