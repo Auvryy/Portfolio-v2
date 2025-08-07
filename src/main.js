@@ -88,7 +88,7 @@ const projectsContent = [
     image: './images/portfolio.png',
     techStack: ['HTML5', 'TailwindCSS', 'JavaScript', 'Vite'],
     link: 'https://github.com/Auvryy/Portfolio-v2'
-  }
+  },
   {
     name: 'Smart Reminder App',
     image: './images/smart-reminder-app.png',
