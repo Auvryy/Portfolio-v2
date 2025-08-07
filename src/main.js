@@ -89,6 +89,12 @@ const projectsContent = [
     techStack: ['HTML5', 'TailwindCSS', 'JavaScript', 'Vite'],
     link: 'https://github.com/Auvryy/Portfolio-v2'
   }
+  {
+    name: 'Smart Reminder App',
+    image: './images/smart-reminder-app.png',
+    techStack: ['HTML5', 'Bootstrap', 'JavaScript'],
+    link: 'https://github.com/Auvryy/Smart-Reminder-App',
+  }
 ];
 
 const generateExp = (object) => {
